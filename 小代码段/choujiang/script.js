@@ -1,9 +1,5 @@
 
 var g_Interval = 1;//滚动速度
-//参加抽奖名单
-var g_Personlist = [880001,880002,880003,880004,880005,880006,880007,880008,880009];
-//var g_Personlist = ["老王","老二","老三","老四","老五"];
-//var g_Prize = ["一等奖":1,"二等奖":2,"三等奖":2,"四等奖":3];
 var g_Timer;
 var running = false;
 var num;
@@ -27,7 +23,7 @@ function beginRndNum(trigger){
 			beginTimer();
 		}
 	}else{
-		return alert("抽奖结束")
+		return alert("抽奖名额不够，请刷新浏览器。")
 	}
 	
 }
