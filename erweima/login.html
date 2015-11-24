@@ -1,0 +1,94 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>信息查询</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="信息查询"/>
+
+  <link rel="stylesheet" href="static/css/amazeui.min.css">
+
+
+  <style>
+    .header {
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 200%;
+      color: #333;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="am-g">
+    <h1>信息查询登录</h1>
+  </div>
+  <hr />
+</div>
+<div class="am-g">
+  <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+    <form method="post" class="am-form " action="a.html" >
+      <input type="text" name="" id="phone" placeholder="请输入手机号" required >
+      <br>
+      <label for="remember">
+        <input id="remember" type="checkbox" checked="checked">
+        记住手机号
+      </label>
+      <br />
+      <div class="am-cf">
+        <button type="submit" class="am-btn am-btn-primary am-btn-block" >立即查询</button>
+      </div>
+   </form>
+   
+    
+  </div>
+</div>
+<div id="foot" class="am-g" style="margin-top:50px;text-align:center;">
+  <p>© 2015 wwwjstimes.com</p>
+</div>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/amazeui.min.js"></script>
+<script>
+var cookie = $.AMUI.utils.cookie;
+var username = cookie.get('username');
+
+$(function(){
+    if (username!=null && username!=""){
+      $("#phone").val(username);
+    }
+
+    $("form").submit(function(e){
+
+        var phone = $("#phone").val();
+        var exdate=new Date();
+        if($('#remember').is(':checked')){
+          exdate.setDate(exdate.getDate()+365);
+          if (username == null || username == "" || phone !=""){
+            cookie.set('username',phone,exdate);
+          }
+        }else{
+          cookie.set('username',"",exdate);
+        }
+      });
+
+
+
+
+})
+
+
+
+
+</script>
+</body>
+</html>

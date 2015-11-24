@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="num">0</div> 
+	<button id="bt">JIAYI</button>
+	<script>
+	(function () {
+		function add () {
+			var a = 0;
+			var e1 = document.getElementById("num"),
+				e2 = document.getElementById("bt");
+			//功能计数
+			function add(fun) {
+				a++;
+				fun&&fun(a);
+			}
+			//ui让界面显示信息
+			var addbtn = function (a) {
+				e1.innerHTML=a;
+			};
+			//绑定事件
+			e2.onclick = function(){
+				add(addbtn);
+				console.log(a);
+			};
+		}
+		add();
+
+	})();
+
+	</script>
+
+</body>
+
+</html>
