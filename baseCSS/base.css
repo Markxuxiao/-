@@ -1,0 +1,123 @@
+/* jdf-1.0.0/ ui-base.css Date:2015-07-02 10:57:01 */
+a,address,b,big,blockquote,body,center,cite,code,dd,del,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,label,legend,li,ol,p,pre,small,span,strong,u,ul,var {
+    margin: 0;
+    padding: 0
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
+    display: block
+}
+hr {-moz-box-sizing: content-box;box-sizing: content-box;height: 0}
+button,html input[type=button],input[type=submit] {-webkit-apperance: button;cursor: pointer}
+button[disabled],html input[disabled] {cursor: default}
+ol,ul {list-style: none}
+img {border: 0;vertical-align: middle}
+em,i,u {font-style: normal}
+
+.fl {float: left}
+.fr {float: right}
+
+.al {text-align: left}
+.ac {text-align: center}
+.ar {text-align: right}
+
+.hide {display: none}
+
+.clear,.clr {display: block;overflow: hidden;clear: both;height: 0;line-height: 0;font-size: 0}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.clearfix {*zoom:1}
+
+.dorpdown {position: relative}
+.dorpdown-layer {display: none;position: absolute}
+.dorpdown:hover .dorpdown-layer,.hover .dorpdown-layer {display: block}
+
+.cw-icon {position: relative;cursor: default;zoom:1}
+.cw-icon .i,.cw-icon i {display: block;position: absolute;overflow: hidden}
+
+.w {width: 990px;margin: 0 auto}
+
+.root61 .w {width: 1210px}
+
+body {
+    font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+    color: #666;
+    background: #fff
+}
+
+a {
+    color: #666;
+    text-decoration: none
+}
+
+a:hover {
+    color: #C81623
+}
+
+.m,.mb,.mc,.mt,.p-detail,.p-img,.p-market,.p-name,.p-price,.sm,.smb,.smc,.smt {
+    overflow: hidden
+}
+
+.img-error {
+    background: url(http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif) no-repeat 50% 50%
+}
+/*inline-block与float布局*/
+
+.inline{
+    display:inline-block;
+    *display:inline;
+    vertical-align:top;
+    *zoom:1;
+}
+
+.row {
+    width: 100%;
+    *zoom:1;
+}
+.row:before,
+.row:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+.row:after {
+  clear: both;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    display: block;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    overflow: hidden;
+}
+
+.col-12 {width: 100%;*width: 99.94%;}
+.col-11 {width: 91.66666666%;*width: 91.66%;}
+.col-10 {width: 83.33333333%;*width: 83.33%;}
+.col-9  {width: 75%;*width: 75%;}
+.col-8  {width: 66.66666666%;*width: 66.66%;}
+.col-7  {width: 58.33333333%;*width: 58.33%;}
+.col-6  {width: 50%;*width: 50%;}
+.col-5  {width: 41.66666666%;*width: 41.66%;}
+.col-4  {width: 33.33333333%;*width: 33.33%;}
+.col-3  {width: 25%;*width: 24.99%;}
+.col-2  {width: 16.66666666%;*width: 16.65%;}
+.col-1  {width: 8.333333333%;*width: 8.3%;}
+
